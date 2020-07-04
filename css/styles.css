@@ -109,6 +109,7 @@ footer {
 	header h1 {
 		font-size: 155%;
 		text-align: center;
+		letter-spacing: -1px;
 	}
 }
 
