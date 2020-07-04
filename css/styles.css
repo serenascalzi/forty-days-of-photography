@@ -1,3 +1,8 @@
+/*
+Colors	Paper Source Colorscope: Black, Gravel
+Fonts	Google Fonts: Roboto, Sacramento
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,14 +14,16 @@
 
 html {
 	box-sizing: border-box;
-	background-color: rgb(68,77,97);
+	background-color: rgb(34,31,32);
+	background-image: url(../images/grid.png);
+	background-blend-mode: overlay;
 	line-height: 2;
 }
 
 body {
-	color: rgb(153,153,153);
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
-	font-size: 15px;	
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	color: rgb(89,88,77);
 }
 
 header {
@@ -30,39 +37,15 @@ header h1 {
 	font-size: 310%;
 }
 
-@media screen and (max-width: 420px) {
-	header h1 {
-		font-size: 196%;
-		text-align: center;
-	}
-}
-
 .section {
 	padding-right: 40px;
 	padding-left: 40px;
-}
-
-@media screen and (max-width: 700px) {
-	.section {
-		padding-right: 20px;
-		padding-left: 20px;
-	}
 }
 
 .container {
 	max-width: 940px;
 	margin: 0 auto;
 	overflow: hidden;
-}
-
-@media screen and (min-width: 1300px) {
-	body {
-		font-size: 17px;
-	}
-
-	.container {
-		max-width: 1200px;
-	}
 }
 
 .content-area {
@@ -75,12 +58,6 @@ header h1 {
 	float: left;
 	width: 66%;
 	padding-right: 40px;
-}
-
-@media screen and (max-width: 1300px) {
-	.push-down-sm {
-		margin-bottom: 10px;
-	}
 }
 
 a {
@@ -99,17 +76,20 @@ img {
 	border-radius: 50%;
 }
 
-.sidebar h2 {
+.sidebar h2, .sidebar h3 {
 	margin-bottom: 5px;
-	color: rgb(102,102,102);
-	font-size: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgb(34,31,32);
+}
+
+.sidebar h2 {
+	font-size: 90%;
 }
 
 .sidebar h3 {
-	margin-bottom: 5px;
-	color: rgb(102,102,102);
 	font-size: 120%;
-	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .sidebar p {
@@ -119,20 +99,38 @@ img {
 footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	color: rgb(255,255,255);
 	font-size: 90%;
-	text-align: center;	
+	text-transform: uppercase;
+	text-align: center;
+	color: rgb(255,255,255);
 }
 
-.social a {
-	padding-right: 10px;
-	padding-left: 10px;
-	color: rgba(255,255,255,1);
-	font-size: 110%;
+@media screen and (max-width: 420px) {
+	header h1 {
+		font-size: 196%;
+		text-align: center;
+	}
 }
 
-.social a:hover {
-	color: rgba(255,255,255,0.5);
+@media screen and (max-width: 700px) {
+	.section {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	body {
+		font-size: 17px;
+	}
+
+	.container {
+		max-width: 1200px;
+	}
+
+	.push-down-sm {
+		margin-bottom: 10px;
+	}
 }
 
 /* Lightbox Styles */
@@ -161,7 +159,6 @@ footer {
 	opacity: 1;
 	transform: scale(1);
 }
-/* End Lightbox Styles */
 
 /* Grid System */
 .row {
@@ -235,7 +232,6 @@ footer {
 	.col-lg-2 {width: 16.662%;}
 	.col-lg-1 {width: 8.332%;}
 }
-/* End Grid System */
 
 /* Clearfix Method */
 .fix {
@@ -259,4 +255,3 @@ footer {
 .group {
 	zoom: 1;
 }
-/* End Clearfix Method */
